@@ -301,15 +301,21 @@ footer img {
 }
 
 .container{
-    max-width: 100%;
+    max-width: 750px;
+    min-width: 500px;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column
 }
 
 .search-box {
-display: flex;
-justify-content: center;
-    width: 50%;
-    max-width: 750px;
+  display: flex;
+ justify-content: center;
+ flex-direction: column;
+    /* width: 50%; */
+    min-width: 50%;
+    max-width: 80%;
     color: white;
     display: flex;
     align-items: center;
@@ -417,6 +423,14 @@ justify-content: center;
 	.block, .welcome {
 		display: none;
 	}
+    .heading {
+        text-align: center;
+        margin-top: 20%;
+        font-size: 30px;
+        color: orange;
+    }
+
+
 }
 
 @media only screen and (min-width: 1100px) {
