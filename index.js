@@ -1,6 +1,7 @@
 window.onload = function() {
     document.getElementById('overlay').style.display = 'block';
     document.getElementById('popup').style.display = 'block';
+    listFiles();
 }
 class MyClass {
     #date = "2024-02-12";
@@ -19,6 +20,7 @@ function validateAndShowPage() {
             return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
         });
     }
+    
     var name = document.getElementById('name').value;
     var date = document.getElementById('date').value;
     console.log('date---',date)
@@ -103,9 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
         frontPage.className = 'front-page';
         if (frontImgSrc) {
             const frontImg = document.createElement('img');
-            frontImg.src = `${folderPath}/${folderName}/${frontImgSrc}`;
-            frontPage.appendChild(frontImg);
+            frontImg.src = `${folderPath}/${folderName}${frontImgSrc+'&sz=w10000'}`;
+            console.log('front--img---',frontImg.src)
+            frontPage.appendChild(frontImg);    
             const fileName = frontImgSrc.replace(/\.[^/.]+$/, ""); // remove extension
+            console.log("name---",fileName)
             if (fileName.length <= 6) {
                 const frontLabel = document.createElement('label');
                 frontLabel.textContent = fileName + 'b';
@@ -121,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         backPage.className = 'back-page';
         if (backImgSrc) {
             const backImg = document.createElement('img');
-            backImg.src = `${folderPath}/${folderName}/${backImgSrc}`;
+            backImg.src = `${folderPath}/${folderName}${backImgSrc+'&sz=w10000'}`;
             backPage.appendChild(backImg);
             const fileName = backImgSrc.replace(/\.[^/.]+$/, ""); // remove extension
             if (fileName.length <= 6) {
@@ -165,6 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < 3; i++) {
         const pageId = `page${i + 1}`;
         const frontPageImgSrc = isCropped ? innerSheetArray[2 * i] : innerSheetArray[i];
+        console.log("front---",frontPageImgSrc)
         const backPageImgSrc = isCropped ? innerSheetArray[2 * i + 1] : innerSheetArray[i + 1];
 
         const page = createPage('inner', frontPageImgSrc, backPageImgSrc, pageId, i + 2, numPages + 1 - i);
@@ -353,9 +358,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("This is a non iOS divice");
         problematicFunction();
       }
-    
-    
-    
     
     
     
