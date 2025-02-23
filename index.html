@@ -6,39 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlipBook</title>
     <link rel="icon" type="image/png" href="../assets/images/FlipBook-fevicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
+
 </head>
 
 <body id="body" style="background: black">
+
+
+
     <div class="overlay" id="overlay"></div>
-    <div class="popup" id="popup">
-        <div class="container">
+   <div class="popup" id="popup" style="display: flex !important;">
+        <div style="width: auto; display: flex;justify-content: center;">
+            <div class="container">
+
+            
           <div class="heading-box">
                 <p class="heading">Feeling Wali Flipbook</p>
+
             </div>
             <div class="search-box">
                 <input type="text" class="search-input" id="name" placeholder="Write Your Name As Written On Album">
                 <input type="text" placeholder="Date of Function" id="date" onfocus="(this.type='date')" onblur="(this.type='text')">
 
                 <input type="button" onclick="validateAndShowPage()" class="search-btn"  value="Search">
+          
             </div>
             <span class="error" hidden]="!nameError" id="nameError">No Result Found !</span><br><br>
-            
+            </div>
         </div>
 
-    </div>
+    </div> 
 
     <!-- Header -->
     <header>
-        <div style="display:flex;" class="logo">
-            <h2>FlipBook </h2>
-            <p style="color:orange; align-items: center;display: flex; margin-left: 10px;">Feeling Wali Flipbook</p>
+        <div style="display:block;" class="logo">
+            <h1>FlipBook </h1>
+            <p style="color:orange; align-items: center;display: flex;">Feeling Wali Flipbook</p>
         </div>
         <div class="client">
             <marquee behavior="alternate" scrollamount="6">
                 <div class="moving-text"><span id="welcomeMessage"></span> ,Wedding Day <br> Tuesday 12/02/2024</div>
             </marquee>
+          
+
         </div>
         <div class="info">
             <p><i class="fa fa-phone" style="margin-right: 12px"></i> <a href="tel:1169272838">98XXXXXX09</a></p>
@@ -61,26 +74,27 @@
 
 
     <!-- Footer -->
-  
+
 
     <div class="welcome">
+
         <img src="./assets/images/welcome_v=2.png" alt="Please Rotate You Phone">
     </div>
 
 
-   
+
 
     <script>
         const numPages = 40;
-        const frontCoverImg = '001DmFirst.png';
-        const backCoverImg = '001Coverlast.png';
-        const innerSheetArray = ["2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png", "10.png", "11.png", "12.png", "13.png", "14.png","15.png","16.png","17.png","18.png","19.png","20.png","21.png",
-        "22.png","23.png","24.png","25.png","26.png","27.png","28.png","29.png","30.png","30_1.png","31.png","32.png","33.png","34.png","35.png","36.png","37.png","38.png","39.png","40.png"];
+        const frontCoverImg = '1lNzYiKynZ6QVqVPM_yuAAVYhhAdHE8V6';
+        const backCoverImg = '1t5oZJBhONXvkKmlKhz5GvOsiI8xBLBxA';
+        const innerSheetArray = ['1OIYkm1l_TodP7E31MzYpL8_Zhhrkootl','1DZJ2kOzybd5VfIaAej88hzAkYUKpasSc','13cu23F1ObH5BW-mTP_y9JdDrLfi7gKUc',
+    '1ph9HV4z9JyxYRkbVKlgx0ULqDF-Kc5BJ','1DcWIdI_6iRkHiSif6i3KZ-ykAmMfdibe','1TKVcurE2Chmt2USsOGCDA7aUUdzsG4BI','1UdzjJSZbUhpcj4bpTq_-N6D4hWwuX5zw','1JodVDYlvQdB22eJqNkMx-EC-fYtveZ8t','1CcKq8-_ztEZI_GgkeZGgukSCjipeWF9D','1pdxFkiEi3bXuitWpZJmVdv2U-6PNuTPZ','1qKANpuHPDl8Mu3gNfZpGmVzOuMXDqtZD','1xmg2_204U87oup6LDT0YfW-H3iSELrsm','16UQJk74lBZLSjn9s8r88YSzd0iozOwZo','1KGSPMNND9q0OrbGnfPXXE8gBS6uTQ6SS','1B2WFxRGmR2icNn_8-dWoUiPCD7Orc-ii','1X5YUB5bnLnA_jkJeFPg9KiHSBABXXgbF','1x3NuP4Uo7gIh2ZJip2zO5nrByTeYfKUU','1plc8q9P68xAEzasrwFDh2EWUQMi9HBUs','1DYF2Vo0k_1TR6zS-UJcaPxlJ4OyX3-Kz','15BpXCBijQXxldlr4fgPG4uOrMi0UAtES','1IJq4YYCZK01OnKGwV27eGcl4FNGz28qE','1c9Rle8GnmwnBeSr6LLrbYLSXqjcStG49','1jdHWaTzYqlsodBic_uO_YRuFyF-RwDmy','1JlSIY2ZnmWufo0oBSbaz6slgXPCioy7c','1Ox_mfsdGdJvy47ZHrXbS4wMGiLQwDT29','1j1-FUcDYnFRZVfr1m0Q-4MB2GaM3L_Xi','1qVlu5SDVBZqw-k44wycuP8K7lpdQMcWl','1egel65vk6_v5tT0BLKfProI4-K9zmxUN','1-bvEUWzVvErye_Xl-UHpe0Hg0oRopSja','1BVsne4gOU0zQdkCcIYJTGEVZ6IXnL7X4','1pkFWHgMlspfHV1HB6CqPWqDBCTd3Ali1','1Tb_beouSPR1CyHPG81teEOfHdSBWYP-8','1J5uWqwWWSu_7PsdDOLX2KRM5io7zvf8S','1OcfsqxJK9vBaEcYCT0OovLJXV8Sf_8iz','1PQ9Tzgl1Az5Aop75zhHg4rF46C_e_JxW','138M2fHVMHSO_QliYT0AUmz7wmPitHlHC','1zsoD2X3Hcwlx1iwh4fDVaKbwyjvt82U3','1LYLfvm8aBH6JBI5hzucJGICIBfopUmB_','1Uxj8m5H1PWbSdTiTuscu0E55WP3Xblcz','1CjQ69fK2ieWSTDQoraGKa5y0KT0oDjw6'];
         const bgMusic = 'OMaahi.mp3';
         const pageOrientation = 'landscape';
         const pageRatio = '1.3';
-        const folderName = "Main";
-        const folderPath = './assets/images/';
+        const folderName = "drive.google.com/thumbnail?id=";
+        const folderPath = 'https://';
         const isCropped = 0;
     </script>
 
